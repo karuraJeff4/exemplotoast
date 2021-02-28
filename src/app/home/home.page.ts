@@ -12,35 +12,29 @@ export class HomePage {
   constructor(public ToastController: ToastController) { 
   }
 
- async msgTopo() {
+async msgtoast(msg:string , duration:number, position: any){
+  const toast = await this.ToastController.create({
+    message: msg,
+    duration: duration,
+    position: position
+  });
+  toast.present();
+}
+
+  async msgTopo() {
     console.log("TOPO")
-    const toast = await this.ToastController.create({
-      message: "Mensagem exibida no Topo",
-      duration: 10000,
-      position: "top"
-    });
-    console.log(toast);
-    toast.present();
+    this.msgtoast("Mensagem no Topo", 5000, "top");
   }
- async msgCentro() {
+  async msgCentro() {
     console.log("Centro")
-    const toast = await this.ToastController.create({
-      message: "Mensagem exibida no Meio",
-      duration: 10000,
-      position: "middle"
-    });
-    console.log(toast);
-    toast.present();
+    this.msgtoast("Mensagem no Centro", 5000, "middle");
+    
   }
- async msgRodape() {
+  async msgRodape() {
     console.log("Rodape")
-    const toast = await this.ToastController.create({
-      message: "Mensagem exibida no Rodape",
-      duration: 10000,
-      position:"bottom"                       
-    });
-    console.log(toast);
-    toast.present();
+    this.msgtoast("Mensagem no Rodape ", 5000, "bottom");
   }
 
 }
+
+  
