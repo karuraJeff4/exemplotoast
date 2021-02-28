@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Mensagens 
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -14,7 +14,18 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <strong>Mensagens toast</strong>
+    <p>Páginas de teste que exibirá Mensagens do tipo Toast</p>
+
+    
+
+
+
+<!-- Expand -->
+<ion-button (click)="msgTopo()" color="success" expand="block">Exibir No Topo </ion-button>
+<ion-button (click)="msgCentro()" color="warning" expand="block" fill="outline">Exibir No Meio</ion-button>
+<ion-button (click)="msgRodape()" color="dark" expand="block">Exiber No rodapé</ion-button>
+
+
   </div>
 </ion-content>
